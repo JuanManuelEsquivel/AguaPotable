@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nueva Toma</title>
+</head>
+<body>
+    <form method="POST" >
+        <ul><b>Nombre: </b><input type="text" name="nombre" id="nombre" value="{{consulta['nombre']}}"></ul>
+        <ul><b>Dirección: </b><input type="text" name="direccion" id="direccion" value="{{consulta['direccion']}}"></ul>
+        <ul><b>Número de medidor: </b><input type="text" name="numero_de_medidor" id="numero_de_medidor" value="{{consulta['numero_de_medidor']}}"></input></ul>
+        <ul><b>Medida actual del medidor: </b><input type="text" name="medida_anterior" id="medida_anterior" value="{{ consulta['medida_actual'] }}"></input></ul>
+        <button type="submit"name="submit_button"value="Guardar"><b>Guardar</b><br /></button>
+        <button type="submit"name="submit_button"value="Inicio"><b>Inicio</b><br /></button>
+    </form>
+</body>
+</html>
