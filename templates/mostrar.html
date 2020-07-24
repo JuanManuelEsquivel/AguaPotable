@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibos</title>
+</head>
+<body>
+    <form method="POST" >
+        {% for elemento in contactos %}
+            <h2>Agua Potable San Agustín</h2>
+            <h3>Recibo de pago</h3>
+            <ul><b>Nombre: </b>{{ elemento.nombre }}</ul>
+            <ul><b>Dirección: </b> {{ elemento.direccion }}</ul>
+            <ul><b>Número de medidor: </b> {{ elemento.numero_de_medidor }}</ul>
+            <ul><b>Medida anterior: </b> {{ elemento.medida_anterior }}</ul>
+            <ul><b>Medida actualmente: </b> {{ elemento.medida_actual }}</ul>
+            <ul><b>Adeudo: </b> {{ elemento.adeudo }}</ul>
+            <ul><b>Período Facturado: </b> {{ elemento.periodo }}</ul><hr>
+            <ul><b>Fecha de último abono: </b> {{ elemento.fecha_ultimo_abono }}</ul><hr>
+        {% endfor %}
+        <button type="submit"name="submit_button"value="Inicio"><b>Inicio</b><br /></button>     
+    </form>
+</body>
+</html>
