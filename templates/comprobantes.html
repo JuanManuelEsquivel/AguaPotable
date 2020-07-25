@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recibos</title>
+    <title>Comprobantes</title>
 </head>
 <body>
     <form method="POST" >
         {% for elemento in contactos %}
             <h2>Agua Potable San Agustín</h2>
-            <h3>Recibo de pago</h3>
+            <h3>Cmprobante de Pago</h3>
             <ul><b>Nombre: </b>{{ elemento.nombre }}</ul>
             <ul><b>Dirección: </b> {{ elemento.direccion }}</ul>
             <ul><b>Número de medidor: </b> {{ elemento.numero_de_medidor }}</ul>
-            <ul><b>Medida anterior: </b> {{ elemento.medida_anterior }}</ul>
-            <ul><b>Medida actualmente: </b> {{ elemento.medida_actual }}</ul>
-            <ul><b>Adeudo: </b> {{ elemento.adeudo }}</ul>
+            <ul><b>Medida actual: </b> {{ elemento.medida_actual }}</ul>            
             <ul><b>Período Facturado: </b> {{ elemento.periodo }}</ul>
+            <ul><b>Adeudo Anterior: </b> {{ elemento.adeudo_anterior }}</ul>
+            <ul><b>Abono: </b> {{ elemento.abono }}</ul>
             <ul><b>Fecha de último abono: </b> {{ elemento.fecha_ultimo_abono }}</ul><hr>
+            <ul><b>Adeudo actualmente: </b> {{ elemento.adeudo }}</ul>
         {% endfor %}
         <button type="submit"name="submit_button"value="Inicio"><b>Inicio</b><br /></button>     
     </form>

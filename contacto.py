@@ -18,7 +18,7 @@ class Contacto:
             self.medida_actual = info['medida_actual']
             self.adeudo = info['adeudo']
             self.periodo = info['periodo']
-            self.fecha_ultimo_abono = info['fecha_ultimo_abono']
+            self.fecha_ultimo_abono = info['fecha_ultimo_pago']
         else:
             raise TypeError
 

@@ -30,7 +30,7 @@ def consultar_contacto(titulo):
 
 def actualizar_contacto(numero_de_medidor, registros):
     resultado = coleccion.update_one({'numero_de_medidor': numero_de_medidor}, 
-        {'$set': {'nombre': registros['nombre'],'direccion':registros['direccion'],'numero_de_medidor':registros['numero_de_medidor'],'medida_actual':registros['medida_actual'],'adeudo':registros['adeudo'],'periodo':registros['periodo'],'fecha_ultimo_pago':registros['fecha_ultimo_pago'],'adeudo_anterior':registros['adeudo_anterior'],'abono':registros['abono']}})
+        {'$set': {'nombre': registros['nombre'],'direccion':registros['direccion'],'numero_de_medidor':registros['numero_de_medidor'],'medida_anterior':registros['medida_anterior'],'medida_actual':registros['medida_actual'],'adeudo':registros['adeudo'],'periodo':registros['periodo'],'fecha_ultimo_pago':registros['fecha_ultimo_pago'],'adeudo_anterior':registros['adeudo_anterior'],'abono':registros['abono']}})
     return str(resultado.modified_count)
 
 def eliminar_contacto(titulo):

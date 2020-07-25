@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagar</title>
+    <title>Eliminar</title>
 </head>
 <body>
-    <h1>Actualizar</h1>
+    <h1>Eliminar</h1>
     <form method="POST" >
         <select name="numerodemedidor" id="numerodemedidor">            
             {% for elemento in todos %}           
                 <option >{{ elemento.numero_de_medidor }}</option>                
             {% endfor %}
         </select><br>
-        <button type="submit"name="submit_button"value="Consultar"><b>Consultar</b><br /></button>     
-        
-        
-        
+        <button type="submit"name="submit_button"value="Consultar"><b>Consultar</b><br /></button>
+
         <ul><b>Nombre: </b><input type="text" name="nombre" id="nombre" value="{{consulta['nombre']}}"></ul>
         <ul><b>Dirección: </b><input type="text" name="direccion" id="direccion" value="{{consulta['direccion']}}"></ul>
         <ul><b>Número de medidor: </b><input type="text" name="numero_de_medidor" id="numero_de_medidor" value="{{consulta['numero_de_medidor']}}"></input></ul>
-        <ul><b>Medida actual: </b><input type="text" name="medida_anterior" id="medida_anterior" value="{{ consulta['medida_actual'] }}"></input></ul>
+        <ul><b>Medida actual: </b><input type="text" name="medida_actual" id="medida_actual" value="{{ consulta['medida_actual'] }}"></input></ul>
         <ul><b>Adeudo: </b><input type="text" name="adeudo_anterior" id="adeudo_anterior" value="{{consulta['adeudo']}}"></ul>
         <ul><b>Último período facturado: </b><input type="text" name="periodo" id="periodo"value="{{consulta['periodo']}}"></ul>
-        <ul><b>Abono: </b><input type="text" name="abono" id="abono" ></ul>
-        <ul><b>fecha: </b><input type="date" name="fecha_ultimo_pago" id="fecha_ultimo_pago" ></ul>
-        <br>
-        <button type="submit"name="submit_button"value="Pagar"><b>Pagar</b><br /></button>
         
-        <button type="submit"name="submit_button"value="Inicio"><b>Inicio</b><br /></button>
-        <button type="submit"name="submit_button"value="Imprimir_comprobantes"><b>Imprimir Comprobantes de Pago</b><br /></button>
+        <button type="submit"name="submit_button"value="Eliminar"><b>Eliminar</b><br /></button>
     </form>
 </body>
 </html>

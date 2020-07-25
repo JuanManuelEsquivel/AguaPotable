@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar</title>
+</head>
+<body>
+    <h1>Actualizar</h1>
+    <form method="POST" >
+        <select name="numerodemedidor" id="numerodemedidor">            
+            {% for elemento in todos %}           
+                <option >{{ elemento.numero_de_medidor }}</option>                
+            {% endfor %}
+        </select><br>
+        <button type="submit"name="submit_button"value="Consultar"><b>Consultar</b><br /></button>
+
+        <ul><b>Nombre: </b><input type="text" name="nombre" id="nombre" value="{{consulta['nombre']}}"></ul>
+        <ul><b>Dirección: </b><input type="text" name="direccion" id="direccion" value="{{consulta['direccion']}}"></ul>
+        <ul><b>Número de medidor: </b><input type="text" name="numero_de_medidor" id="numero_de_medidor" value="{{consulta['numero_de_medidor']}}"></input></ul>
+        <ul><b>Medida anterior: </b><input type="text" name="medida_anterior" id="medida_anterior" value="{{ consulta['medida_actual'] }}"></input></ul>
+        <ul><b>Adeudo: </b><input type="text" name="adeudo" id="adeudo" value="{{consulta['adeudo']}}"></ul>
+        <ul><b>Medida actual: </b><input type="text" name="medida_actual" id="medida_actual" ></input></ul>        
+        <ul><b>período: </b><input type="month" name="periodo" id="periodo"></ul>
+        
+        <button type="submit"name="submit_button"value="Actualizar"><b>Actualizar</b><br /></button>
+        <button type="submit"name="submit_button"value="Inicio"><b>Inicio</b><br /></button>
+    </form>
+</body>
+</html>
