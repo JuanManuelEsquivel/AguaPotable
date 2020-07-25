@@ -129,7 +129,8 @@ def pagar():
             nuevo_contacto['nombre']= request.form['nombre']
             nuevo_contacto['direccion']= request.form['direccion']
             nuevo_contacto['numero_de_medidor']= request.form['numero_de_medidor']
-            nuevo_contacto['medida_actual']= request.form['medida_anterior']            
+            nuevo_contacto['medida_anterior']= request.form['medida_anterior']            
+            nuevo_contacto['medida_actual']=request.form['medida_actual']            
             nuevo_contacto['periodo']=request.form['periodo']
             abono=int(request.form['abono'])
             anterior=int(request.form['adeudo_anterior'])
@@ -137,7 +138,7 @@ def pagar():
             nuevo_contacto['adeudo']=total
             nuevo_contacto['adeudo_anterior']=anterior
             nuevo_contacto['fecha_ultimo_pago']=request.form['fecha_ultimo_pago']
-            nuevo_contacto['abono']=abono            
+            nuevo_contacto['abono']=abono                
             #en_caja=mostrar_dinero()
             #guardado=en_caja['dinero_en_caja']                     
             consulta = actualizar_contacto(request.form['numero_de_medidor'],nuevo_contacto)
